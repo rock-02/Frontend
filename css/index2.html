@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        font-family: PlayfairDisplay-Black, sans-serif;
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+      }
+      #div1 {
+        background: #000;
+        position: absolute;
+        left: 100px;
+      }
+
+      #div2 {
+        background: #f00;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+      }
+
+      #div3 {
+        background: #0f0;
+      }
+
+      #div4 {
+        background: #00f;
+        position: relative;
+      }
+
+      #div5 {
+        background: #0ff;
+        position: absolute;
+        width: 5px;
+        height: 10px;
+        top: 50%;
+        left: 80%;
+      }
+
+      nav {
+        display: flex;
+
+        justify-content: center;
+
+        gap: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="div1"></div>
+
+    <div id="div2"></div>
+
+    <div id="div3"></div>
+
+    <br />
+    <br />
+    <br />
+
+    <div id="div4">
+      <div id="div5"></div>
+    </div>
+
+    <nav>
+      <h4>Home</h4>
+      <h4>Home</h4>
+      <h4>Home</h4>
+      <h4>Home</h4>
+    </nav>
+  </body>
+</html>
