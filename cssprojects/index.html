@@ -34,11 +34,12 @@
       #nav {
         display: flex;
         justify-content: flex-end;
-        height: 60px;
+        height: 80px;
         align-items: center;
+        /* background-color: red; */
         gap: 20px;
         padding: 0 30px;
-        text-transform: uppercase;
+        text-transform: capitalize;
       }
       #nav h4 {
         font-size: 20px;
@@ -47,6 +48,168 @@
         background-color: black;
         color: white;
         font-size: 25px;
+        padding: 10px;
+        border-radius: 50%;
+      }
+      #center {
+        /* background-color: red; */
+        width: 100%;
+        padding: 40px 80px;
+      }
+
+      #center h1 {
+        font-size: 80px;
+        font-size: 6vw;
+        font-weight: 500;
+        line-height: 6.5vw;
+      }
+
+      #center-in {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #center-in p {
+        font-size: 22px;
+        margin-top: 50px;
+        font-weight: 600;
+        line-height: 30px;
+      }
+
+      #right {
+        width: 20%;
+        padding: 50px 20px;
+      }
+
+      .elem {
+        border-top: 2px solid black;
+        padding: 18px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .elem i {
+        font-size: 25px;
+        opacity: 0;
+      }
+
+      .elem:hover i {
+        opacity: 1;
+      }
+      .elem:hover a {
+        opacity: 1;
+        text-decoration: underline;
+        color: orangered;
+      }
+      .elem a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 600;
+        font-size: 20px;
+      }
+      #bottom {
+        width: 100%;
+        height: 45%;
+        background-image: url(https://plus.unsplash.com/premium_photo-1661759708290-3d1865e7572e?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3);
+        background-position: 0 50%;
+        background-size: cover;
+      }
+
+      @media (max-width: 600px) {
+        #nav {
+          display: flex;
+          justify-content: flex-end;
+          height: 60px;
+          align-items: center;
+          /* background-color: red; */
+          gap: 10px;
+          padding: 0 20px;
+          text-transform: capitalize;
+        }
+        #nav h4 {
+          font-size: 15px;
+        }
+        #nav i {
+          background-color: black;
+          color: white;
+          font-size: 15px;
+          padding: 7px;
+          border-radius: 50%;
+        }
+
+        #center {
+          /* background-color: red; */
+          width: 100%;
+          padding: 15px 25px;
+        }
+
+        #center h1 {
+          font-size: 80px;
+          font-size: 6vw;
+          font-weight: 500;
+          line-height: 6.5vw;
+        }
+
+        #center-in {
+          display: flex;
+          /* background: red; */
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        #center-in p {
+          font-size: 3.7vw;
+          margin-top: 50px;
+          font-weight: 600;
+          line-height: 3.9vw;
+        }
+
+        #right {
+          width: 100%;
+          padding: 35px 0px;
+        }
+
+        .elem {
+          border-top: 1px solid black;
+          padding: 14px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .elem i {
+          font-size: 15px;
+          opacity: 0;
+        }
+
+        .elem i {
+          font-size: 15px;
+          opacity: 0;
+        }
+
+        .elem:hover i {
+          opacity: 1;
+        }
+        .elem:hover a {
+          opacity: 1;
+          text-decoration: underline;
+          color: orangered;
+        }
+        .elem a {
+          text-decoration: none;
+          color: #000;
+          font-weight: 600;
+          font-size: 15px;
+        }
+
+        #bottom {
+          width: 100%;
+          height: 35%;
+          background-image: url(https://plus.unsplash.com/premium_photo-1661759708290-3d1865e7572e?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3);
+          background-position: 0 50%;
+          background-size: cover;
+        }
       }
     </style>
   </head>
@@ -60,6 +223,37 @@
         <h4>cart</h4>
         <i class="ri-git-repository-private-line"></i>
       </div>
+
+      <div id="center">
+        <h1>
+          Lightly padded, <br />quality jacket in <br />
+          recycled polyster.
+        </h1>
+
+        <div id="center-in">
+          <p>
+            Exclusive brand aspire for the label houte <br />
+            courture but the term is techniucally limited <br />
+            to memths of the chambre Syndicate do to houte.
+          </p>
+
+          <div id="right">
+            <div class="elem">
+              <a href="">Add To Cart</a>
+              <i class="ri-arrow-right-up-line"></i>
+            </div>
+            <div class="elem">
+              <a href="">Product Details</a>
+              <i class="ri-arrow-right-up-line"></i>
+            </div>
+            <div class="elem">
+              <a href="">Shipping</a>
+              <i class="ri-arrow-right-up-line"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="bottom"></div>
     </div>
   </body>
 </html>
