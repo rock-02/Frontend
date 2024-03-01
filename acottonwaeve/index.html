@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        font-family: "Roboto", sans-serif;
+      }
+
+      /* Your other CSS rules go here */
+
+      #main {
+        height: 100%;
+        width: 100%;
+        /* background-color: red; */
+
+        display: flex;
+        align-items: flex-end;
+        /* justify-content: space-between; */
+        padding: 50px 90px;
+        padding-top: 150px;
+      }
+
+      #left {
+        height: 100%;
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* background: blue; */
+      }
+
+      #bottom-left {
+        width: 100%;
+        height: 40%;
+        /* background-color: yellow; */
+      }
+
+      #right {
+        height: 90%;
+        width: 28%;
+        position: relative;
+        /* background-color: green; */
+      }
+
+      #left h1 {
+        font-size: 8.8vw;
+        font-weight: 500;
+        line-height: 9vw;
+      }
+
+      #colors {
+        width: fit-content;
+        border-radius: 50px;
+        padding: 10px 15px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #color1 {
+        background-color: brown;
+        width: 20px;
+        border-radius: 50%;
+        height: 20px;
+        margin-left: 3px;
+      }
+      #color2 {
+        background-color: burlywood;
+        width: 20px;
+        border-radius: 50%;
+        height: 20px;
+        margin-left: 2px;
+      }
+
+      #colors h5 {
+        font-size: 1.2vw;
+        font-weight: 600;
+      }
+
+      #bottom-left h2 {
+        font-size: 2.5vw;
+        margin-top: 50px;
+        margin-bottom: 10px;
+      }
+
+      #bottom-left p {
+        width: 70%;
+        font-size: 1.2vw;
+        line-height: 1.5vw;
+        line-height: 22px;
+        color: #444;
+      }
+
+      #right-top {
+        width: 100%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #right-top h5 {
+        font-size: 1.2vw;
+        font-weight: 500;
+        color: rgb(1, 1, 1);
+      }
+
+      #right-top h5 i {
+        font-size: 20px;
+        color: rgb(229, 205, 21);
+      }
+
+      #right img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        margin-top: 10px;
+      }
+
+      #bag {
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        right: -75px;
+        top: 44%;
+        background: #000;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+      #bag h3 {
+        font-size: 20px;
+      }
+
+      #rotated {
+        position: absolute;
+        bottom: 5%;
+        left: -5%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+        font-size: 30px;
+        font-weight: 500;
+      }
+
+      #rotated h2 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      @media (max-width: 600px) {
+        #main {
+          height: 100%;
+          width: 100%;
+          /* background-color: red; */
+
+          display: flex;
+          align-items: flex-end;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 10px 20px;
+          padding-top: 50px;
+        }
+
+        #left {
+          height: 100%;
+          width: 58%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          /* background: blue; */
+        }
+
+        #bottom-left {
+          width: 100%;
+          height: 40%;
+          /* margin-top: 25%; */
+          /* background-color: yellow; */
+        }
+
+        #right {
+          width: 100%;
+          width: 58%;
+          position: relative;
+          margin-top: 15%;
+          /* background-color: green; */
+        }
+
+        #left h1 {
+          font-size: 8.8vw;
+          font-weight: 500;
+          line-height: 9vw;
+        }
+
+        #colors {
+          width: fit-content;
+          border-radius: 50px;
+          padding: 10px 15px;
+          border: 2px solid black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #color1 {
+          background-color: brown;
+          width: 20px;
+          border-radius: 50%;
+          height: 20px;
+          margin-left: 3px;
+        }
+        #color2 {
+          background-color: burlywood;
+          width: 20px;
+          border-radius: 50%;
+          height: 20px;
+          margin-left: 2px;
+        }
+
+        #colors h5 {
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        #bottom-left h2 {
+          font-size: 2.5vw;
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+
+        #bottom-left p {
+          width: 100%;
+          font-size: 2.4vw;
+          line-height: 2.8vw;
+          color: #444;
+        }
+
+        #right-top {
+          width: 100%;
+          /* background: rgb(201, 11, 11); */
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        #right-top h5 {
+          font-size: 3vw;
+          font-weight: 500;
+          color: rgb(1, 1, 1);
+        }
+
+        #right-top h5 i {
+          font-size: 3vw;
+          color: rgb(229, 205, 21);
+        }
+
+        #right img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          margin-top: 10px;
+        }
+
+        #bag {
+          width: 100px;
+          height: 100px;
+          position: absolute;
+          right: -12%;
+          top: 44%;
+          background: #000;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+        }
+        #bag h3 {
+          font-size: 14px;
+        }
+
+        #rotated {
+          position: absolute;
+          bottom: 5%;
+          left: -5%;
+          transform: translate(-50%, -50%) rotate(-90deg);
+          font-size: 30px;
+          font-weight: 500;
+        }
+
+        #rotated h2 {
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="left">
+        <h1>
+          a Cotton <br />
+          Weave.
+        </h1>
+        <div id="bottom-left">
+          <div id="colors">
+            <h5>Colors</h5>
+            <div id="color1"></div>
+            <div id="color2"></div>
+          </div>
+
+          <h2>Details</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio,
+            ex eum, nobis veritatis inventore, porro doloremque aspernatur
+            doloribus autem ipsam deleniti? Deserunt ullam facere minus.
+          </p>
+        </div>
+      </div>
+      <div id="right">
+        <div id="right-top">
+          <h5>$488</h5>
+          <h5>
+            Rating
+            <i class="ri-star-s-fill"></i>
+            <i class="ri-star-s-fill"></i>
+            <i class="ri-star-s-fill"></i>
+            <i class="ri-star-s-fill"></i>
+            <i class="ri-star-s-fill"></i>
+          </h5>
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1531384698654-7f6e477ca221?q=80&w=1900&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+
+        <div id="bag">
+          <h3>Add To Bag</h3>
+        </div>
+
+        <div id="rotated">
+          <h2>Cotton Twill Scarf</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
