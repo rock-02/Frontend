@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>Apple</li>
+    </ul>
+    <input type="text" /> <br /><br />
+
+    <button>add</button>
+    <button id="remove">remove</button>
+
+    <script>
+      var ul = document.querySelector("ul");
+
+      var btn = document.querySelector("button");
+
+      var inp = document.querySelector("input");
+
+      var li;
+      btn.addEventListener("click", function () {
+        if (inp.value.trim() === "") {
+          alert("Error");
+          return;
+        }
+        li = document.createElement("li");
+
+        li.textContent = inp.value;
+
+        inp.value = "";
+
+        ul.appendChild(li);
+      });
+
+      document.getElementById("remove").addEventListener("click", () => {
+        ul.removeChild(li);
+      });
+    </script>
+  </body>
+</html>

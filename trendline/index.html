@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        font-family: "Roboto", sans-serif;
+      }
+
+      #main {
+        width: 100%;
+        height: 100%;
+      }
+
+      #nav1 {
+        display: flex;
+        /* background-color: red; */
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        padding: 0 50px;
+        font-size: 18px;
+      }
+
+      #nav-part2 {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .circle {
+        height: 25px;
+        width: 25px;
+        background-color: #000;
+        border-radius: 50%;
+      }
+
+      #nav-part1 {
+        display: flex;
+        gap: 1px;
+      }
+
+      #nav2 {
+        height: 70px;
+        /* background: red; */
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        padding: 0 50px;
+      }
+
+      #nav1 h3 {
+        font-size: 18px;
+      }
+
+      #nav2 h3 {
+        text-transform: uppercase;
+        font-size: 15px;
+      }
+
+      #content {
+        width: 100%;
+        height: calc(100% - 150px);
+        /* background-color: blue; */
+      }
+
+      #text-content {
+        width: 100%;
+        height: 45%;
+        /* background-color: greenyellow; */
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+
+      #text-content::-webkit-scrollbar {
+        background: transparent;
+        height: 7px;
+        width: 85px;
+      }
+
+      #text-content::-webkit-scrollbar-thumb {
+        background-color: orangered;
+      }
+
+      .elme {
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 80px;
+        font-weight: 400;
+      }
+
+      .elme h3 {
+        font-size: 80px;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+
+      #img-content {
+        height: 55%;
+        width: 100%;
+        background-color: greenyellow;
+        display: flex;
+        overflow-x: auto;
+      }
+      #img-content img {
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      /* Your other CSS rules go here */
+
+      
+    </style>
+  </head>
+
+  <body>
+    <div id="main">
+      <div id="nav1">
+        <div id="nav-part1">
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+
+        <div id="nav-part2">
+          <h3>EN <span>RU</span></h3>
+          <h3>Coutry : Russia</h3>
+          <h3>Profile</h3>
+          <h3>Website(0)</h3>
+          <h3>Search</h3>
+        </div>
+      </div>
+
+      <div id="nav2">
+        <h3>Sun</h3>
+        <h3>Optical</h3>
+        <h3>Collections</h3>
+        <h3>studio</h3>
+        <h3>About</h3>
+        <h3>Shops</h3>
+        <h3>Journal</h3>
+      </div>
+
+      <div id="content">
+        <div id="text-content">
+          <div class="elme">
+            <h3>Johny Walker</h3>
+          </div>
+          <div class="elme">
+            <h3>TrendLine</h3>
+          </div>
+          <div class="elme">
+            <h3>Blenders</h3>
+          </div>
+          <div class="elme">
+            <h3>LensCart</h3>
+          </div>
+        </div>
+
+        <div id="img-content">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHlLO2P62JDr35uG1p0kW-tglVgWtjVK3FE5UKaZGBe6Lz7Npd"
+            alt=""
+          />
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROhkCWm3DpdiYc3vpNjYP1MPVNfF7Lx-2iNviS6CjsALRlG9qh"
+            alt=""
+          />
+
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO6PqlAOuTrV-3nFH54XdJSrvTdY4IDiCLZLar40oLRw6BE469"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

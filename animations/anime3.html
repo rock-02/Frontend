@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: #000;
+      }
+      #btn1 {
+        width: 200px;
+        height: 60px;
+        background-color: cyan;
+        /* border: 2px solid rgb(192, 52, 52); */
+        color: black;
+        /* border-radius: 15px; */
+        text-transform: uppercase;
+        font-weight: 800;
+        position: relative;
+        z-index: 1;
+      }
+
+      #btn1::after {
+        content: "";
+        position: absolute;
+        background-color: red;
+        /* border: 2px solid rgb(192, 52, 52); */
+        /* border-radius: 15px; */
+        height: 100%;
+        width: 0;
+        left: 0;
+        top: 0;
+        transition: all linear 2s;
+        z-index: -2;
+      }
+
+      #btn1:hover::after {
+        width: 100%;
+      }
+
+      #btn {
+        height: 60px;
+        width: 200px;
+        margin: 50px;
+        background: rgb(17, 184, 79);
+        position: relative;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        z-index: 1;
+        overflow: hidden;
+      }
+
+      #btn::after {
+        content: "";
+        height: 50px;
+        position: absolute;
+        width: 50px;
+        background-color: red;
+        border-radius: 50%;
+        left: 50%;
+        z-index: -2;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: all linear 0.5s;
+      }
+
+      #btn:hover::after {
+        transform: translate(-50%, -50%) scale(5);
+      }
+
+      #btn:hover{
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn1">start Now</button>
+    <button id="btn">start Now</button>
+  </body>
+</html>

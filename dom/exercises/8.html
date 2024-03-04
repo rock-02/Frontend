@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        font-family: "Roboto", sans-serif;
+      }
+
+      #main {
+        width: 100%;
+        height: 100%;
+      }
+
+      #container {
+        width: 100%;
+        height: 100%;
+        padding: 10vw 15vw;
+      }
+
+      input {
+        width: 100%;
+        height: 40px;
+        padding: 1px 5px;
+        font-size: 18px;
+      }
+
+      #people {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #person {
+        display: flex;
+        width: fit-content;
+        flex-direction: column;
+        justify-content: center;
+        padding: 8px;
+        align-items: center;
+      }
+
+      #person img {
+        object-fit: cover;
+        width: 100px;
+        height: 140px;
+        border-radius: 50%;
+      }
+      /* Your other CSS rules go here */
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="container">
+        <input type="text" name="" id="search" placeholder="search.." />
+
+        <div id="people">
+          <div id="person">
+            <img
+              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D"
+              alt=""
+            />
+            <h3>Sandeep</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const data = [
+        {
+          name: "Sandeep",
+          src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D",
+        },
+        {
+          name: "Ajay",
+          src: "https://plus.unsplash.com/premium_photo-1683121366070-5ceb7e007a97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHBvcnRyYWl0fGVufDB8fDB8fHww",
+        },
+        {
+          name: "Ankita",
+          src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          name: "Anju",
+          src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D",
+        },
+        {
+          name: "Ajith",
+          src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBvcnRyYWl0fGVufDB8fDB8fHww",
+        },
+      ];
+
+      let people = document.getElementById("people");
+      var ps = "";
+      data.forEach((p) => {
+        ps += `<div id="person">
+            <img
+              src="${p.src}"
+            />
+            <h3>${p.name}</h3>
+          </div>`;
+      });
+
+      document.getElementById("people").innerHTML = ps;
+      let input = document.querySelector("input");
+      input.addEventListener("input", () => {
+        var fps = "";
+
+        let fppl = data.filter((p) => {
+          return p.name.startsWith(input.value);
+        });
+
+        fppl.forEach((p) => {
+          fps += `<div id="person">
+            <img
+              src="${p.src}"
+            />
+            <h3>${p.name}</h3>
+          </div>`;
+        });
+
+        document.getElementById("people").innerHTML = fps;
+      });
+    </script>
+  </body>
+</html>

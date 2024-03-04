@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .tabs {
+        height: 100px;
+        background-color: black;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+      }
+
+      .tab {
+        color: white;
+        font-size: 3vw;
+
+        background-color: #14c16d;
+        padding: 15px;
+        border-radius: 50px;
+      }
+
+      h3 {
+        display: none;
+        height: 50%;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      h3 > span {
+        font-size: 2vw;
+        font-weight: 700;
+        color: rebeccapurple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabs">
+      <div class="tab" id="home">Home</div>
+      <div class="tab" id="abt">About</div>
+      <div class="tab" id="cont">Contact</div>
+    </div>
+
+    <h3 id="home1">
+      <span>Home</span> <br />
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
+      voluptatem vitae pariatur, quisquam totam dolore, impedit eum quia quis
+      omnis harum animi molestiae. Autem, officiis?
+    </h3>
+    <h3 id="abt1">
+      <span> About</span> <br />
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque rem
+      excepturi nemo quibusdam! Nam necessitatibus officia totam fugit,
+      quibusdam doloremque laudantium ipsa repellat dicta vero recusandae qui
+      impedit.
+    </h3>
+    <h3 id="cont1">
+      <span>Contact</span> <br />
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quia quis
+      libero sunt! Assumenda officiis dolor provident necessitatibus unde.
+      Tempora mollitia odio doloribus iste impedit eligendi. Quis facilis atque
+      voluptatem tempora voluptas necessitatibus provident doloribus, quod porro
+      modi dolorem incidunt qui totam?
+    </h3>
+
+    <script>
+      var home = document.querySelector("#home");
+      var abotDiv = document.querySelector("#abt");
+      var ContactDiv = document.querySelector("#cont");
+
+      var homeText = document.querySelector("#home1");
+      var abtText = document.querySelector("#abt1");
+      var conText = document.querySelector("#cont1");
+
+      homeText.style.display = "block";
+
+      home.addEventListener("click", () => {
+        noneDisplay();
+        homeText.style.display = "block";
+      });
+      abotDiv.addEventListener("click", () => {
+        noneDisplay();
+        abtText.style.display = "block";
+      });
+      ContactDiv.addEventListener("click", () => {
+        noneDisplay();
+        conText.style.display = "block";
+      });
+
+      function noneDisplay() {
+        homeText.style.display = "none";
+        abtText.style.display = "none";
+        conText.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

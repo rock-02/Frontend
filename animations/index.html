@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        font-family: "Roboto", sans-serif;
+      }
+
+      #box {
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        position: absolute;
+        animation-duration: 2s;
+        animation-name: anime;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-delay: 1s;
+      }
+
+      @keyframes anime {
+        from {
+          left: 0;
+        }
+        to {
+          left: 60%;
+          background-color: blue;
+          rotate: 360deg;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+  </body>
+</html>

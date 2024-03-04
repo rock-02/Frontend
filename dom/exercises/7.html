@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #down {
+        height: 20px;
+        width: 250px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        background-color: red;
+        border-radius: 50px;
+        left: 50%;
+        top: 50%;
+      }
+
+      #prog {
+        height: 20px;
+        border-radius: 50px;
+        background: green;
+        width: 0%;
+      }
+
+      button {
+        position: absolute;
+        left: 50%;
+        top: 55%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="down">
+      <div id="prog"></div>
+    </div>
+    <button>start</button>
+
+    <script>
+      var prog = document.querySelector("#prog");
+
+      document.querySelector("button").addEventListener("click", () => {
+        let count = 0;
+
+        setInterval(() => {
+          if (count == 100) {
+            alert("DownLoad Completed");
+            return;
+          }
+          prog.style.width = count + "%";
+          count++;
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

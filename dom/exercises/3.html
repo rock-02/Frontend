@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h4></h4>
+    <form action="">
+      <input type="text" id="input1" /> <br /><br />
+      <input type="text" id="input2" /> <br /><br />
+      <input type="submit" />
+    </form>
+
+    <script>
+      var form = document.querySelector("form");
+
+      var input1 = document.querySelector("#input1");
+      var input2 = document.querySelector("#input2");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        console.log("form submitted");
+
+        var h4 = document.querySelector("h4");
+
+        console.log(input1.value);
+
+        if (input1.value == "") {
+          //   alert("Enter Input1");
+          h4.textContent = "Enter Input1";
+        } else if (input2.value == "") {
+          //   alert("Enter 2");
+          h4.textContent = "Enter Input2";
+        } else {
+          console.log("submitted");
+
+          h4.textContent = "";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>0</h1>
+
+    <button>click</button>
+
+    <h3>0</h3>
+
+    <button id="st">Start</button>
+    <script>
+      var h1 = document.querySelector("h1");
+      var h3 = document.querySelector("h3");
+      var count = 0;
+      console.log(h1.value);
+      document.querySelector("button").addEventListener("click", () => {
+        h1.textContent = count;
+        count++;
+      });
+
+      document.querySelector("#st").addEventListener("click", () => {
+        let count = 0;
+        setInterval(() => {
+          h3.textContent = count;
+          count++;
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
