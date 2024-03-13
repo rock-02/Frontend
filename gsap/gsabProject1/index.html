@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=
+    , initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            font-family: "Roboto", sans-serif;
+        }
+
+        #main {
+            width: 100%;
+            height: 100%;
+
+            position: relative;
+        }
+
+        #page1 {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            background-color: #111;
+
+            background-image: url(https://hotelodisej.com/wp-content/uploads/bf-advanced-images/209/ALH_Odisej_exterior_aerial_07-scaled-1920x0.jpg);
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        #page3 {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            background-color: #46afbd;
+        }
+
+        #page2 {
+            width: 100vw;
+            height: 100vh;
+            /* background-color: #75f593; */
+            background-color: #616c4c;
+            position: relative;
+            padding: 2vh 3vh;
+        }
+
+        #page1 #nav {
+            height: 70px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 60px;
+        }
+
+        #page2 h1 {
+            text-align: center;
+            font-size: 4.5vw;
+            line-height: 4.7vw;
+            color: #434b34;
+            font-weight: 500;
+            font-family: PP Woodland;
+        }
+
+        #page2 h1 span {
+            font-weight: 500;
+            font-family: PP Woodland;
+        }
+       
+
+
+        #part2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        #part1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       #nav #part2 h3{
+            font-size: 1.2vw;
+            border: 1px solid black;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-family:PP Woodland ;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #434B34;
+            transition: all ease 1s;
+            /* color: #E3E3C4; */
+        }
+
+        #nav #part2 h3:hover{
+            background-color: #E3e3c4;
+        }
+
+        #nav #part2 h3:nth-child(2){
+            background-color: #434B34;
+            color: #E3e3c4;
+        }
+
+        #nav #part1 i{
+            font-size: 30px;
+        }
+
+   
+     
+    #page1 #text h1{
+        font-weight: 500;
+        text-transform: capitalize;
+        font-size: 4.5vw;
+        font-family:PP Woodland ;
+        line-height:3vw;
+
+        text-align: center;
+        color: #434B34;
+
+    }
+
+    #page1 #text h1:nth-last-child(1){
+        font-size: 2vw;
+        text-transform: uppercase;
+    }
+
+    
+  
+    /* Your other CSS rules go here */
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="page1">
+            <div id="nav">
+                <div id="part1"><i class="ri-menu-line"></i></div>
+                <div id="part2">
+                    <h3>Online check-in</h3>
+                    <h3>Book Now</h3>
+                </div>
+                </i>
+            </div>
+
+            <div id="text">
+                <h1>hotel odisej</h1>
+                <h1>mljet</h1>
+            </div>
+        </div>
+        <div id="page2">
+            <h1 id="firsth1">Set within the</h1>
+            <h1>verdant pine and</h1>
+            <h1>oak tree forest of</h1>
+            <h1>Mljet National Park,</h1>
+            <h1>Hotel Odisej Mljet is</h1>
+            <h1>just two hours by</h1>
+            <h1>passenger or car</h1>
+            <h1>ferry from</h1>
+            <h1>Dubrovnik.</h1>
+        </div>
+        <div id="page3"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" <script src="script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
